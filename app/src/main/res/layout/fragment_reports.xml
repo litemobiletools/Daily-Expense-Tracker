@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/space_xl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/screen_margin_h"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/report_presets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_week"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_this_week" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_month"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_this_month" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_prev_month"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_previous_month" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_30"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_last_30" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_90"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_last_90" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_year"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_this_year" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/report_chip_custom"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reports_custom"
+                    app:chipIcon="@drawable/ic_calendar"
+                    app:chipIconVisible="true" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/screen_margin_h">
+
+            <LinearLayout
+                android:id="@+id/report_period_block"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/report_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:accessibilityHeading="true"
+                    android:importantForAccessibility="no"
+                    android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                <TextView
+                    android:id="@+id/report_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:textAppearance="@style/TextAppearance.DET.Body" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/report_export"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/reports_export"
+                app:icon="@drawable/ic_export" />
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/report_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:contentDescription="@string/reports_loading"
+            android:indeterminate="true"
+            android:paddingHorizontal="@dimen/screen_margin_h"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/report_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/screen_margin_h"
+            android:text="@string/reports_error"
+            android:textAppearance="@style/TextAppearance.DET.Body"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/report_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/screen_margin_h">
+
+            <!-- Summary -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_lg">
+
+                    <LinearLayout
+                        android:id="@+id/report_summary_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/report_income_line"
+                            layout="@layout/item_insight_line" />
+
+                        <include
+                            android:id="@+id/report_expense_line"
+                            layout="@layout/item_insight_line" />
+
+                        <include
+                            android:id="@+id/report_net_line"
+                            layout="@layout/item_insight_line" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/report_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:text="@string/reports_empty"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/report_compare_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:textAppearance="@style/TextAppearance.DET.Label" />
+
+                    <TextView
+                        android:id="@+id/report_compare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/report_average"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/report_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Trend -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_lg">
+
+                    <TextView
+                        android:id="@+id/report_trend_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <com.litemobiletools.dailyexpensetracker.ui.widget.BarChartView
+                        android:id="@+id/report_daily_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="@dimen/space_md" />
+
+                    <com.litemobiletools.dailyexpensetracker.ui.widget.PairedBarChartView
+                        android:id="@+id/report_monthly_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/report_monthly_legend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:gravity="center_vertical"
+                        android:importantForAccessibility="noHideDescendants"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_circle_solid"
+                            android:backgroundTint="@color/income" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_xs"
+                            android:layout_marginEnd="@dimen/space_lg"
+                            android:text="@string/reports_legend_income"
+                            android:textAppearance="@style/TextAppearance.DET.Body" />
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_circle_solid"
+                            android:backgroundTint="@color/expense" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_xs"
+                            android:text="@string/reports_legend_expenses"
+                            android:textAppearance="@style/TextAppearance.DET.Body" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/report_trend_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/space_lg"
+                        android:text="@string/reports_trend_empty"
+                        android:textAppearance="@style/TextAppearance.DET.Body"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Expenses by category -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space_lg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:paddingHorizontal="@dimen/space_lg"
+                        android:text="@string/reports_expense_categories"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/report_sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/space_lg"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/report_sort_amount"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/reports_sort_amount" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/report_sort_name"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reports_sort_name" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <com.litemobiletools.dailyexpensetracker.ui.widget.DonutChartView
+                        android:id="@+id/report_donut"
+                        android:layout_width="@dimen/chart_size"
+                        android:layout_height="@dimen/chart_size"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/space_sm" />
+
+                    <LinearLayout
+                        android:id="@+id/report_expense_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/report_expense_categories_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_lg"
+                        android:text="@string/reports_no_expenses"
+                        android:textAppearance="@style/TextAppearance.DET.Body"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Income by category -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space_lg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:paddingHorizontal="@dimen/space_lg"
+                        android:text="@string/reports_income_categories"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <LinearLayout
+                        android:id="@+id/report_income_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/report_income_categories_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_lg"
+                        android:text="@string/reports_no_income"
+                        android:textAppearance="@style/TextAppearance.DET.Body"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Largest expenses -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/report_largest_expenses_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_lg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/reports_largest_expenses"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <LinearLayout
+                        android:id="@+id/report_largest_expenses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Largest income -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/report_largest_income_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_lg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/reports_largest_income"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <LinearLayout
+                        android:id="@+id/report_largest_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Budgets -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space_lg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:paddingHorizontal="@dimen/space_lg"
+                        android:text="@string/reports_budgets"
+                        android:textAppearance="@style/TextAppearance.DET.SectionTitle" />
+
+                    <TextView
+                        android:id="@+id/report_budgets_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/space_lg"
+                        android:paddingVertical="@dimen/space_sm"
+                        android:textAppearance="@style/TextAppearance.DET.Body" />
+
+                    <LinearLayout
+                        android:id="@+id/report_budgets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/report_view_transactions"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/reports_view_transactions"
+                app:icon="@drawable/ic_transactions" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/reports_facts_note"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

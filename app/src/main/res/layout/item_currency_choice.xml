@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    One currency row in the picker. The checked state is owned by the surrounding RadioGroup, so
+    the row root IS the radio button (RadioGroup exclusivity only works for its direct children).
+-->
+<com.google.android.material.radiobutton.MaterialRadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="48dp"
+    android:paddingStart="@dimen/space_lg"
+    android:paddingTop="@dimen/space_sm"
+    android:paddingEnd="@dimen/space_lg"
+    android:paddingBottom="@dimen/space_sm"
+    android:textAppearance="@style/TextAppearance.DET.Body" />

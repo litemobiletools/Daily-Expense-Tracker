@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ======================================================
+    AD ID CONFIGURATION (Phase 10)
+    ======================================================
+
+    The two IDs below are Google's OFFICIAL TEST IDs (published at
+    developers.google.com/admob/android/test-ads). They always serve test ads
+    and exist purely for development and store review builds. AdMob accounts
+    are not required for them, and they can be left in place for any internal
+    or review build.
+
+    TO MONETIZE (before publishing to Google Play):
+      1. Create an app and a banner ad unit in your AdMob account (apps.admob.com).
+         The app's package name in AdMob must match this project:
+         com.litemobiletools.dailyexpensetracker
+      2. In your AdMob console create the required consent message under
+         Privacy &amp; messaging. Full walkthrough: docs/ADMOB_SETUP.md.
+      3. Replace ONLY these two resource values (never hardcode real IDs in Java):
+           admob_app_id          the AdMob "App ID"  (Settings > App settings), shaped ca-app-pub-XXXXXXXXXXXXXXXX~NNNNNNNNNN
+           admob_banner_unit_id   the banner ad unit's ID, shaped ca-app-pub-XXXXXXXXXXXXXXXX/NNNNNNNNNN
+
+    RELEASE SAFETY: a release build that still carries the test IDs below (or a
+    malformed ID) disables ad requests entirely instead of shipping accidental
+    configuration. See util/AdReleaseGuard (unit tested) and AdSupport.
+-->
+<resources>
+
+    <!-- Google's official sample App ID (test), as provided in the demo snippet. -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!-- Google's official test banner ad unit, as provided in the demo snippet. If the banner
+         ever fails to fill on some devices, the adaptive-banner-specific test unit is
+         ca-app-pub-3940256099942544/9214589741 - a one-line swap here. -->
+    <string name="admob_banner_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- Google's official test interstitial ad unit, as provided in the demo snippet. -->
+    <string name="admob_interstitial_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+</resources>

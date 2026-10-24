@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="det_primary">#A9C4F0</color>
+    <color name="det_on_primary">#0B2545</color>
+    <color name="det_primary_container">#1E3A5F</color>
+    <color name="det_on_primary_container">#D9E4F5</color>
+    <color name="det_secondary">#4CD6A0</color>
+    <color name="det_on_secondary">#06301F</color>
+    <color name="det_secondary_container">#134B33</color>
+    <color name="det_on_secondary_container">#CDEFDD</color>
+
+    <color name="det_background">#0E141C</color>
+    <color name="det_surface">#151D28</color>
+    <color name="det_surface_container_low">#121923</color>
+    <color name="det_surface_container">#1A2430</color>
+    <color name="det_surface_container_high">#212C3A</color>
+    <color name="det_surface_variant">#263242</color>
+    <color name="det_on_surface">#E6EBF2</color>
+    <color name="det_on_surface_variant">#A9B4C3</color>
+    <color name="det_outline">#8793A3</color>
+    <color name="det_outline_variant">#303C4C</color>
+    <color name="det_error">#FFB4AB</color>
+    <color name="det_on_error">#601410</color>
+
+    <color name="income">#4CD6A0</color>
+    <color name="income_container">#134B33</color>
+    <color name="expense">#FF9C8F</color>
+    <color name="warning">#FFB74D</color>
+    <color name="expense_container">#5A2420</color>
+
+    <color name="hero_background">#1E3A5F</color>
+    <color name="hero_on">#FFFFFF</color>
+    <color name="hero_on_variant">#B9C9E0</color>
+
+    <color name="chart_1">#6FA3D6</color>
+    <color name="chart_2">#3CC590</color>
+    <color name="chart_3">#E8B93E</color>
+    <color name="chart_4">#DE7E91</color>
+    <color name="chart_5">#A094E0</color>
+</resources>

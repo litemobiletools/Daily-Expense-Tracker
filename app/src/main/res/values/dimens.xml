@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 4dp spacing scale -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+
+    <!-- Horizontal screen gutter; grows on wider screens (see values-w600dp / values-w840dp) -->
+    <dimen name="screen_margin_h">16dp</dimen>
+
+    <dimen name="radius_card">16dp</dimen>
+    <dimen name="radius_pill">20dp</dimen>
+    <dimen name="min_touch">48dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="icon_badge_size">40dp</dimen>
+    <dimen name="chart_size">150dp</dimen>
+</resources>

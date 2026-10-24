@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+    <include layout="@layout/layout_app_bar" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--
+        Phase 10: one anchored adaptive banner shared by all five top-level tabs, so navigating
+        never creates or re-requests a second banner. The container stays empty and invisible
+        until a banner actually loads, so offline use or a failed ad request leaves the layout
+        exactly as it was before Phase 10. Secondary activities (add/edit transaction, backup,
+        recurring, insights, goals) deliberately show no ads.
+    -->
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

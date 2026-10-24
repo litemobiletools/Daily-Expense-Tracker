@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Floating cards: a tilted green card behind a white card carrying a rising bar chart, with a
+     gold coin overlapping the corner. Everything sits inside the 66dp adaptive-icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Ground shadow (stacked translucent layers imitate a blur) -->
+    <path android:fillColor="#0D000000" android:pathData="M30,74h48a10,10 0,0 1,10 10v0a10,10 0,0 1,-10 6h-48a10,10 0,0 1,-10 -6v0a10,10 0,0 1,10 -10z" />
+    <path android:fillColor="#12000000" android:pathData="M33,76h42a8,8 0,0 1,8 8v0a8,8 0,0 1,-8 4h-42a8,8 0,0 1,-8 -4v0a8,8 0,0 1,8 -8z" />
+    <path android:fillColor="#1A000000" android:pathData="M37,78h34a6,6 0,0 1,6 6v0a6,6 0,0 1,-6 3h-34a6,6 0,0 1,-6 -3v0a6,6 0,0 1,6 -6z" />
+
+    <!-- Back card, tilted -->
+    <group android:pivotX="54" android:pivotY="54" android:rotation="-12">
+        <path android:pathData="M42,32h24a10,10 0,0 1,10 10v24a10,10 0,0 1,-10 10h-24a10,10 0,0 1,-10 -10v-24a10,10 0,0 1,10 -10z">
+            <aapt:attr name="android:fillColor">
+                <gradient android:startX="32" android:startY="32" android:endX="76" android:endY="76" android:type="linear">
+                    <item android:color="#4FE3A8" android:offset="0.0" />
+                    <item android:color="#1B9E6B" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+
+    <!-- Front card -->
+    <path android:pathData="M42,36h24a10,10 0,0 1,10 10v22a10,10 0,0 1,-10 10h-24a10,10 0,0 1,-10 -10v-22a10,10 0,0 1,10 -10z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="32" android:startY="36" android:endX="76" android:endY="78" android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0.0" />
+                <item android:color="#E4ECF8" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Rising bars -->
+    <path android:fillColor="#2F7DE1" android:pathData="M39,60h6a1.5,1.5 0,0 1,1.5 1.5v6a1.5,1.5 0,0 1,-1.5 1.5h-6a1.5,1.5 0,0 1,-1.5 -1.5v-6a1.5,1.5 0,0 1,1.5 -1.5z" />
+    <path android:fillColor="#1B9E6B" android:pathData="M49,54h6a1.5,1.5 0,0 1,1.5 1.5v12a1.5,1.5 0,0 1,-1.5 1.5h-6a1.5,1.5 0,0 1,-1.5 -1.5v-12a1.5,1.5 0,0 1,1.5 -1.5z" />
+    <path android:fillColor="#0B2545" android:pathData="M59,47h6a1.5,1.5 0,0 1,1.5 1.5v19a1.5,1.5 0,0 1,-1.5 1.5h-6a1.5,1.5 0,0 1,-1.5 -1.5v-19a1.5,1.5 0,0 1,1.5 -1.5z" />
+
+    <!-- Coin -->
+    <path android:fillColor="#33000000" android:pathData="M73,41m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    <path android:pathData="M73,39m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="64" android:startY="30" android:endX="82" android:endY="48" android:type="linear">
+                <item android:color="#FFD86B" android:offset="0.0" />
+                <item android:color="#E0A413" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillColor="#00000000" android:pathData="M73,39m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" android:strokeColor="#FFF3C4" android:strokeWidth="1.8" />
+</vector>

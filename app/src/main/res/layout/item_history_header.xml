@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:accessibilityHeading="true"
+    android:paddingTop="@dimen/space_lg"
+    android:paddingBottom="@dimen/space_xs"
+    android:textAppearance="@style/TextAppearance.DET.Label"
+    android:textColor="?attr/colorPrimary"
+    android:textStyle="bold" />

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drive_title">Backup and restore</string>
+    <string name="drive_status_heading">Google Drive</string>
+    <string name="drive_working">Working</string>
+
+    <string name="drive_state_not_connected">Not connected</string>
+    <string name="drive_state_not_connected_detail">Google Drive is not connected. The app works fully without it, and everything stays on this device.</string>
+    <string name="drive_state_authorizing">Waiting for Google</string>
+    <string name="drive_state_authorizing_detail">Complete the Google screen to continue.</string>
+    <string name="drive_state_checking">Checking access</string>
+    <string name="drive_state_checking_detail">Confirming that the app can reach its private Drive folder.</string>
+    <string name="drive_state_connected">Connected</string>
+    <string name="drive_state_connected_detail">Drive access is working. You can back up to Google Drive and restore from a backup on this screen.</string>
+    <string name="drive_state_disconnecting">Disconnecting</string>
+    <string name="drive_state_disconnecting_detail">Withdrawing the app\'s Drive access.</string>
+    <string name="drive_state_reauth">Permission needed again</string>
+    <string name="drive_state_reauth_detail">Google needs you to approve Drive access again. Your data on this device is not affected.</string>
+    <string name="drive_state_network">No connection</string>
+    <string name="drive_state_network_detail">Could not reach Google. Check your internet connection and try again. Offline use is not affected.</string>
+    <string name="drive_state_service">Google is unavailable</string>
+    <string name="drive_state_service_detail">Google or Google Play services did not respond properly. Try again in a little while.</string>
+    <string name="drive_state_denied">Permission not granted</string>
+    <string name="drive_state_denied_detail">Drive access was not granted. You can try again at any time; the app keeps working without it.</string>
+    <string name="drive_state_config">Drive is not set up in this build</string>
+    <string name="drive_state_config_detail">This build is not configured for Google Drive (OAuth client, package name and signing fingerprint, or the Drive API). The app works offline as usual. See docs/GOOGLE_DRIVE_SETUP.md.</string>
+
+    <string name="drive_connect">Connect Google Drive</string>
+    <string name="drive_try_again">Try again</string>
+    <string name="drive_reconnect">Approve again</string>
+    <string name="drive_disconnect">Disconnect</string>
+
+    <string name="drive_connect_dialog_title">Connect Google Drive?</string>
+    <string name="drive_connect_dialog_message">Google will ask you to allow this app to use its own hidden storage area in your Google Drive. The app cannot see your other Drive files or your email address. You can disconnect at any time.</string>
+    <string name="drive_connect_continue">Continue</string>
+
+    <string name="drive_disconnect_dialog_title">Disconnect Google Drive?</string>
+    <string name="drive_disconnect_dialog_message">The app will ask Google to withdraw its Drive access. Your transactions on this device and anything already stored in your Drive are not deleted.</string>
+
+    <string name="drive_event_connected">Google Drive connected.</string>
+    <string name="drive_event_cancelled">Google Drive was not connected. If Google showed an error such as "access blocked", check docs/GOOGLE_DRIVE_SETUP.md.</string>
+    <string name="drive_detail_with_code">%1$s (Google status code %2$d)</string>
+    <string name="drive_event_disconnected_revoked">Disconnected. Google confirmed the app\'s Drive access was withdrawn.</string>
+    <string name="drive_event_disconnected_local">Disconnected on this device, but the app could not confirm that Google withdrew its access. You can remove it in your Google Account settings.</string>
+
+    <string name="drive_about_heading">What Drive is for</string>
+    <string name="drive_about_body">Connecting lets this app keep a backup in a private, hidden area of your own Google Drive, which only this app can use. You can always back up by hand on this screen, and optionally let the app back up automatically - only when you have turned automatic backup on, and only into that same hidden folder. Offline use never needs Drive, and the app never asks for it when it starts.</string>
+
+    <string name="drive_privacy_heading">Your privacy</string>
+    <string name="drive_privacy_body">The app asks Google for one permission: access to its own hidden application-data folder in your Drive. It does not request your profile, email address, or other Drive files. There is no account with us and no server of ours. Access tokens are kept only in memory and are never saved or logged. Anything stored in your Drive will be protected by your Google account, not by extra encryption from this app. Disconnecting does not delete data already in your Drive.</string>
+    <string name="drive_open_permissions">Review Google Account access</string>
+    <string name="drive_open_failed">Could not open your Google Account settings.</string>
+
+    <string name="privacy_dialog_title">Privacy</string>
+    <string name="privacy_dialog_message">Your transactions, budgets and goals are stored only on this device. The app has no account with us, no server, and it uses no analytics.\n\nIf you choose to connect Google Drive, the app asks for access to its own hidden folder in your Drive and nothing else. Backups are written to that hidden folder only. If you turn automatic backup on, the app copies the same backup data to that folder on a schedule you choose; when an automatic backup succeeds, older automatic backup files are removed from that hidden folder so only the newest backup remains. Nothing is uploaded while automatic backup is off, and you can turn it off at any time on the Backup and restore screen.\n\nDisconnecting Google Drive withdraws the app\'s access. Your data on this device is not touched, and anything already stored in your Drive folder by the app stays there - in the hidden folder, outside the normal Drive interface. To remove it from Google entirely, use Drive\'s Settings > Manage apps, or delete your Drive data.\n\nThe app does not provide extra encryption of its own for data in Google Drive; the data there is protected by your Google account. Local backups and the database itself are stored unencrypted in your device\'s private app storage, like other app data. If Android\'s own system backup is turned on in your device settings, Android may also include this app\'s data in your Google account backup; that backup is managed by Android and your Google account, not by this app.\n\nAdvertising: this app shows a small banner ad below the content on the main screens and, at most once every ten minutes, a full-screen ad when you close the Insights screen, both served by the Google Mobile Ads SDK (Google AdMob). It is the only advertising software in the app; the app itself has no analytics and sends no diagnostic or crash data anywhere. Because it serves ads, Google\'s SDK processes advertising-related data such as ad requests and the device\'s advertising identifier according to Google\'s own policies and to the consent choices you make.\n\nAds are never shown while you enter or edit a transaction, or during backups, restores, exports or confirmation dialogs, and no feature is locked behind an ad. Where consent is required and you decline, ads are not personalized. Your consent choices can be reviewed at any time under Settings > Ad privacy options (when your region requires the entry point). Your expense data stays on this device: advertising never reads your transactions, budgets, goals or backups.\n\nA public privacy policy page has not been added to this build yet.</string>
+
+    <!-- Manual backup and restore (Phase 7) -->
+    <string name="backup_card_heading">Manual backup and restore</string>
+    <string name="backup_now_action">Back up now</string>
+    <string name="backup_restore_action">Restore backup</string>
+    <string name="backup_try_again">Try again</string>
+    <string name="backup_working">Backup or restore running</string>
+    <string name="backup_last_ok">Last backup: %1$s</string>
+    <string name="backup_last_never">No backup has been made from this device yet.</string>
+    <string name="backup_unknown_time">Time unknown</string>
+    <string name="backup_size_unknown">Size unknown</string>
+    <string name="backup_list_heading">Backups in your Drive</string>
+    <string name="backup_list_empty">No backups in the app\'s hidden Drive folder yet. Tap "Back up now" to create the first one.</string>
+
+    <string name="backup_confirm_title">Back up now?</string>
+    <string name="backup_confirm_message">This saves a copy of all your transactions, budgets, savings goals and categories to the app\'s hidden folder in your Google Drive. Only this app can read that folder. Existing backups stay in place.</string>
+
+    <string name="backup_done">Backup saved as %1$s.</string>
+
+    <string name="restore_pick_title">Restore this backup?</string>
+    <string name="restore_pick_message">Your data on this device would be replaced with the backup from %1$s. Nothing changes until you confirm, and a temporary safety copy of your current data is made first.</string>
+    <string name="restore_confirm_title">Replace current data?</string>
+    <string name="restore_confirm_message">The backup from %1$s replaces all data on this device: %2$d records in total (transactions, budgets, savings goals, categories and more). This cannot be undone. A temporary safety copy of your current data is made first, the backup in your Drive stays untouched, and the change happens in one step.</string>
+    <string name="restore_confirm_positive">Replace data</string>
+    <string name="restore_running_status">Restoring data&#8230;</string>
+    <plurals name="backup_restore_done">
+        <item quantity="one">Restore finished: 1 record restored.</item>
+        <item quantity="other">Restore finished: %1$d records restored.</item>
+    </plurals>
+
+    <string name="backup_fail_not_connected">Google Drive is not connected yet. Connect it to back up or restore.</string>
+    <string name="backup_fail_connect_prompt_title">Connect Google Drive?</string>
+    <string name="backup_fail_denied">Google Drive permission was not granted. You can try again.</string>
+    <string name="backup_fail_auth">Google refused the request. You can try again later.</string>
+    <string name="backup_fail_auth_config">This build is not set up for Google Drive authorization, or access was withdrawn at Google. See docs/GOOGLE_DRIVE_SETUP.md.</string>
+    <string name="backup_fail_network">Could not reach Google. Check your internet connection and try again.</string>
+    <string name="backup_fail_rate_limited">Google is limiting requests right now. Please try again later.</string>
+    <string name="backup_fail_server">Google had a temporary problem. Please try again later.</string>
+    <string name="backup_fail_drive_full">Your Google Drive is full, so the backup could not be stored. Free up space and try again.</string>
+    <string name="backup_fail_not_found">That backup no longer exists in your Drive. Refresh the list.</string>
+    <string name="backup_fail_malformed">That backup file is damaged, incomplete or was altered, so it was rejected. Your data on this device was not touched.</string>
+    <string name="backup_fail_version">That backup was made by a newer version of the app or by another app, so it cannot be restored here. Your data on this device was not touched.</string>
+    <string name="backup_fail_restore_db">The restore could not be completed. Your previous data is unchanged; the temporary safety copy of your data is kept on this device.</string>
+    <string name="backup_fail_unknown">Something unexpected went wrong. Your data on this device was not changed.</string>
+
+    <!-- Automatic backup (Phase 8) -->
+    <string name="auto_card_heading">Automatic backup</string>
+    <string name="auto_card_explanation">When this is on, the app keeps its backup up to date on its own: it copies the same backup data as the button above (all your transactions, budgets, savings goals, categories and the app\'s settings) to the hidden app folder in your Google Drive  -  %1$s, roughly around %2$s. Only the newest backup is kept in Drive: it replaces the previous one, and only after the replacement has been fully uploaded and checked.\n\nBackground jobs can be delayed by Android (battery saving, Doze mode, connection availability), so the time is never exact. Nothing is uploaded before you turn this on, and the app works fully offline as before.</string>
+    <string name="auto_card_off">Automatic backup is off. The app only backs up when you tap Back up now.</string>
+    <string name="auto_enable">Automatic backup</string>
+    <string name="auto_frequency_label">Frequency</string>
+    <string name="auto_frequency_daily">Daily</string>
+    <string name="auto_frequency_weekly">Weekly</string>
+    <string name="auto_time_label">Preferred time</string>
+    <string name="auto_time_dialog_title">Preferred backup time</string>
+    <string name="auto_time_summary">Around %1$s</string>
+    <string name="auto_time_note">Android may run the job earlier or later; the exact time is not guaranteed.</string>
+    <string name="auto_status_heading">Status</string>
+    <string name="auto_on">Turn on</string>
+    <string name="auto_off">Turn off</string>
+    <string name="auto_state_not_run_yet">Automatic backup has not run yet.</string>
+    <string name="auto_state_in_progress">Backup in progress&#8230;</string>
+    <string name="auto_state_success">Backup successful at %1$s.</string>
+    <string name="auto_state_up_to_date">Backup successful  -  your data has not changed since the backup of %1$s.</string>
+    <string name="auto_state_waiting_network">Waiting for a network connection. The backup will run when the device is back online.</string>
+    <string name="auto_state_auth_required">Google Drive needs to be connected or approved again. Connect it above; the next automatic backup will then work on its own.</string>
+    <string name="auto_state_failed">The automatic backup failed. It will try again on the next scheduled run.</string>
+    <string name="auto_state_failed_with_code">The automatic backup failed (status code %1$d). It will try again on the next scheduled run.</string>
+    <string name="auto_not_scheduled">Not scheduled (turned off).</string>
+    <string name="auto_next_run">Next backup: around %1$s.</string>
+    <string name="auto_next_run_unknown">Next backup: at the next scheduled opportunity.</string>
+    <string name="auto_enable_confirm_title">Turn on automatic backup?</string>
+    <string name="auto_enable_confirm_message">With automatic backup on, this app copies your backup data (transactions, budgets, savings goals, categories and settings) to its hidden folder in your Google Drive on a schedule. You can turn it off here at any time. Turning it on requires a connected Google Drive; the app never uploads anything while automatic backup is off.</string>
+    <string name="auto_disable_confirm_title">Turn off automatic backup?</string>
+    <string name="auto_disable_confirm_message">The scheduled background backup will be cancelled. Your data on this device is unchanged, and anything already in your Drive stays there. You can still back up at any time by hand.</string>
+    <string name="backup_fail_busy">Another backup or restore operation is already running. Try again when it finishes.</string>
+    <string name="settings_auto_backup_summary_on">On - %1$s, around %2$s</string>
+    <string name="settings_auto_backup_summary_off">Schedule regular backups of your data</string>
+</resources>

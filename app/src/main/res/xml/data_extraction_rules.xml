@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Android 12+ backup and device-transfer rules. The Drive connection preference describes this device's
+   authorization with Google, so it is never copied to another device.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="drive_connection.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="drive_connection.xml" />
+    </device-transfer>
+</data-extraction-rules>

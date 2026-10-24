@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shared -->
+    <string name="action_save_short">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_clear">Clear</string>
+    <string name="load_failed">Could not load this screen. Your data is safe on this device.</string>
+    <string name="save_failed">Could not save. Nothing was changed. Please try again.</string>
+    <string name="change_failed">That did not work. Nothing was changed.</string>
+    <string name="previous_period">Previous period</string>
+    <string name="next_period">Next period</string>
+    <string name="currency_hint_budget">Amounts are in %1$s. Only expenses in this currency are counted.</string>
+
+    <!-- Budgets tab -->
+    <string name="budgets_goals">Goals</string>
+    <string name="budgets_recurring">Recurring</string>
+    <string name="budgets_insights">Insights</string>
+    <string name="budgets_monthly">Monthly</string>
+    <string name="budgets_weekly">Weekly</string>
+    <string name="budgets_overall">Overall budget</string>
+    <string name="budgets_overall_empty_title">No overall budget</string>
+    <string name="budgets_overall_empty_message">Set a limit for all your expenses in this period.</string>
+    <string name="budgets_set_overall">Set overall budget</string>
+    <string name="budgets_by_category">Category budgets</string>
+    <string name="budgets_category_empty">No category budgets yet. Add one to watch a single category.</string>
+    <string name="budgets_note">Each budget is calculated on its own from the expenses you recorded, so an expense counts toward the overall budget and toward its category budget. Recording an expense is never blocked by a budget.</string>
+    <string name="budgets_add">Add budget</string>
+    <string name="budget_status_ok">On track</string>
+    <string name="budget_status_warning">Close to the limit</string>
+    <string name="budget_status_reached">Limit reached</string>
+    <string name="budget_status_exceeded">Over budget by %1$s</string>
+    <string name="budget_spent_of">%1$s of %2$s</string>
+    <string name="budget_percent_used">%1$d%% used</string>
+    <string name="budget_remaining">%1$s left</string>
+    <string name="budget_row_description">%1$s: %2$s spent of %3$s, %4$d percent used. %5$s</string>
+
+    <string name="budget_editor_new">New budget</string>
+    <string name="budget_editor_edit">Edit budget</string>
+    <string name="budget_field_category">Applies to</string>
+    <string name="budget_category_overall">All expenses (overall)</string>
+    <string name="budget_field_amount">Limit</string>
+    <string name="budget_error_duplicate">A budget for this period and category already exists. Edit it instead.</string>
+    <string name="budget_saved">Budget saved</string>
+    <string name="budget_deleted">Budget deleted</string>
+    <string name="budget_delete_title">Delete this budget?</string>
+    <string name="budget_delete_message">The limit is removed. Your transactions are not changed.</string>
+
+    <!-- Savings goals -->
+    <string name="goals_title">Savings goals</string>
+    <string name="goals_note">Goals are tracking notes. Updating a goal does not move money, create transactions, or change your balance.</string>
+    <string name="goals_empty_title">No savings goals yet</string>
+    <string name="goals_empty_message">Track progress toward something you are saving for, like an emergency fund or a trip.</string>
+    <string name="goals_add">Add goal</string>
+    <string name="goal_saved_of">%1$s saved of %2$s</string>
+    <string name="goal_remaining">%1$s to go</string>
+    <string name="goal_percent">%1$d%%</string>
+    <string name="goal_completed">Completed</string>
+    <string name="goal_due">Target date: %1$s</string>
+    <string name="goal_row_description">%1$s: %2$s saved of %3$s, %4$d percent. %5$s</string>
+    <string name="goal_editor_new">New goal</string>
+    <string name="goal_editor_edit">Edit goal</string>
+    <string name="goal_field_name">Goal name</string>
+    <string name="goal_field_target">Target amount</string>
+    <string name="goal_field_date">Target date (optional)</string>
+    <string name="goal_error_name">Enter a goal name</string>
+    <string name="goal_add_money">Add money</string>
+    <string name="goal_withdraw">Take out</string>
+    <string name="goal_mark_completed">Complete</string>
+    <string name="goal_reopen">Reopen</string>
+    <string name="goal_history">History</string>
+    <string name="goal_history_empty">No contributions yet.</string>
+    <string name="goal_contribution_add">Add to %1$s</string>
+    <string name="goal_contribution_withdraw">Take out of %1$s</string>
+    <string name="goal_contribution_amount">Amount</string>
+    <string name="goal_contribution_note">Note (optional)</string>
+    <string name="goal_contribution_confirm">Confirm</string>
+    <string name="goal_error_withdraw">You cannot take out more than the saved amount</string>
+    <string name="goal_delete_title">Delete this goal?</string>
+    <string name="goal_delete_message">%1$s and its contribution history will be removed from this device. Your transactions are not affected.</string>
+    <string name="goal_deleted">Goal deleted</string>
+    <string name="goal_saved_toast">Goal saved</string>
+    <string name="goal_updated_toast">Progress updated</string>
+    <string name="goal_contribution_line">%1$s · %2$s</string>
+
+    <!-- Recurring -->
+    <string name="recurring_title">Recurring transactions</string>
+    <string name="recurring_note">Recurring entries create records in this app on schedule. They do not transfer money or connect to any bank.</string>
+    <string name="recurring_missed_title">Missed occurrences</string>
+    <string name="recurring_missed_catch_up">Record them (up to the last %1$d per rule)</string>
+    <string name="recurring_missed_skip">Skip them (only record what is due today)</string>
+    <string name="recurring_missed_summary_catch_up">When the app was closed: record the most recent missed entries</string>
+    <string name="recurring_missed_summary_skip">When the app was closed: skip missed entries</string>
+    <string name="recurring_empty_title">No recurring transactions</string>
+    <string name="recurring_empty_message">Add rent, salary or subscriptions once and the app records them on schedule.</string>
+    <string name="recurring_add">Add recurring</string>
+    <string name="recurring_next">Next: %1$s</string>
+    <string name="recurring_paused">Paused</string>
+    <string name="recurring_ended">Ended</string>
+    <plurals name="recurring_skipped_count">
+        <item quantity="one">1 missed entry was skipped</item>
+        <item quantity="other">%1$d missed entries were skipped</item>
+    </plurals>
+    <string name="recurring_row_summary">%1$s · %2$s · %3$s</string>
+    <plurals name="recurring_recorded_toast">
+        <item quantity="one">1 recurring transaction was recorded</item>
+        <item quantity="other">%1$d recurring transactions were recorded</item>
+    </plurals>
+    <string name="freq_daily">Daily</string>
+    <string name="freq_weekly">Weekly</string>
+    <string name="freq_monthly">Monthly</string>
+    <string name="freq_yearly">Yearly</string>
+    <string name="recurring_editor_new">New recurring transaction</string>
+    <string name="recurring_editor_edit">Edit recurring transaction</string>
+    <string name="recurring_field_frequency">Repeats</string>
+    <string name="recurring_field_start">Start date</string>
+    <string name="recurring_field_end">End date (optional)</string>
+    <string name="recurring_clear_end">Remove end date</string>
+    <string name="recurring_error_end">End date must not be before the start date</string>
+    <string name="recurring_start_hint">If the start date is in the past, the schedule begins at its next occurrence from today. Past dates are not filled in.</string>
+    <string name="recurring_month_end_hint">A monthly entry on the 29th–31st uses the last day of shorter months. A yearly Feb 29 entry uses Feb 28 in non-leap years.</string>
+    <string name="recurring_status">Status</string>
+    <string name="recurring_history">Recorded so far</string>
+    <string name="recurring_history_empty">Nothing recorded yet.</string>
+    <string name="recurring_history_line">%1$s</string>
+    <string name="recurring_saved_toast">Recurring transaction saved</string>
+    <string name="recurring_delete_title">Delete this recurring transaction?</string>
+    <string name="recurring_delete_message">It will stop recording new entries. Entries it already recorded stay in your history.</string>
+    <string name="recurring_deleted">Recurring transaction deleted</string>
+    <string name="recurring_not_found">This recurring transaction no longer exists.</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Spending insights</string>
+    <string name="insights_note">Based only on the transactions you recorded for this month and currency. These are past figures, not predictions or advice.</string>
+    <string name="insights_income">Income</string>
+    <string name="insights_expenses">Expenses</string>
+    <string name="insights_vs_last_month">Compared with last month</string>
+    <string name="insights_vs_up">%1$d%% higher than last month (%2$s)</string>
+    <string name="insights_vs_down">%1$d%% lower than last month (%2$s)</string>
+    <string name="insights_vs_same">Same as last month (%1$s)</string>
+    <string name="insights_in_progress">This month is not over yet, so this comparison will change.</string>
+    <string name="insights_vs_none">No expenses recorded last month to compare with</string>
+    <string name="insights_average">Average per day</string>
+    <string name="insights_average_value">%1$s over %2$d days</string>
+    <string name="insights_average_none">Not available yet</string>
+    <string name="insights_savings_rate">Savings rate</string>
+    <string name="insights_savings_value">%1$d%% of income was not spent</string>
+    <string name="insights_savings_negative">Spending was %1$d%% above income</string>
+    <string name="insights_savings_none">Needs income recorded this month</string>
+    <string name="insights_daily_chart">Daily spending</string>
+    <string name="insights_daily_chart_description">Daily spending bar chart for %1$s. Highest day: %2$s with %3$s. Total %4$s.</string>
+    <string name="insights_daily_chart_empty">No spending recorded this month</string>
+    <string name="insights_top_categories">Top spending categories</string>
+    <string name="insights_largest">Largest expenses</string>
+    <string name="insights_highest_days">Highest spending days</string>
+    <string name="insights_budgets">Budget observations</string>
+    <string name="insights_budgets_ok">All monthly budgets are within their limits.</string>
+    <string name="insights_budgets_none">No monthly budgets set. Create one on the Budgets tab.</string>
+    <string name="insights_see_all">See insights</string>
+    <string name="insights_category_line">%1$s, %2$s, %3$d%% of spending</string>
+    <string name="insights_day_line">%1$s: %2$s</string>
+
+    <!-- Dashboard additions -->
+    <string name="home_budget_category_title">Category budgets</string>
+    <string name="home_insights_title">This month at a glance</string>
+    <string name="home_insights_compare">So far this month: %1$s. All of last month: %2$s.</string>
+    <string name="home_insights_top">Top category: %1$s (%2$s).</string>
+    <string name="home_insights_empty">Insights appear once you record expenses.</string>
+</resources>

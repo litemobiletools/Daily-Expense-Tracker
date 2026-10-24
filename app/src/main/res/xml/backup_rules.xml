@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Android Auto Backup rules (API 30 and lower). The Drive connection preference describes this device's
+   authorization with Google, so it must not be restored onto another device.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="drive_connection.xml" />
+</full-backup-content>

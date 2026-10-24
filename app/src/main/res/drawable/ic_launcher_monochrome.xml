@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single-colour silhouette for Android 13+ themed icons: card with chart cut-outs, plus coin. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M42,36h24a10,10 0,0 1,10 10v22a10,10 0,0 1,-10 10h-24a10,10 0,0 1,-10 -10v-22a10,10 0,0 1,10 -10zM39,60h7v9h-7zM49,54h7v15h-7zM59,47h7v22h-7z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M73,39m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0M73,39m-5,0a5,5 0,1 0,10 0a5,5 0,1 0,-10 0" />
+</vector>

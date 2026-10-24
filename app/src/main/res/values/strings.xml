@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Daily Expense Tracker Lite</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_budgets">Budgets</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_settings">Settings</string>
+    <string name="toolbar_home">Daily Expense Tracker</string>
+    <string name="navigate_back">Navigate back</string>
+
+    <!-- Home -->
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="home_total_balance">Total balance</string>
+    <string name="home_balance_caption">Income minus expenses, all time</string>
+    <string name="home_income">Income this month</string>
+    <string name="home_expenses">Expenses this month</string>
+    <string name="home_this_month">This month</string>
+    <string name="home_monthly_spending">Monthly spending</string>
+    <string name="home_budget_summary">%1$s of %2$s</string>
+    <string name="home_budget_hint">%1$d%% of budget used · %2$s left</string>
+    <string name="home_budget_over">Over budget by %1$s</string>
+    <string name="home_budget_none">No monthly budget set. Create one on the Budgets tab.</string>
+    <string name="home_breakdown">Spending breakdown</string>
+    <string name="home_breakdown_empty">No spending recorded this month</string>
+    <string name="home_breakdown_other">Other</string>
+    <!-- %1$s = display name of the selected currency, e.g. "Taka (BDT)". Kept as one sentence so
+         the disclosure reads naturally right below the totals it qualifies. -->
+    <plurals name="home_other_currency_note">
+        <item quantity="one">These totals include %1$s only. %2$d transaction this month is in another currency and is not included here.</item>
+        <item quantity="other">These totals include %1$s only. %2$d transactions this month are in other currencies and are not included here.</item>
+    </plurals>
+    <string name="home_load_error">Could not load your data. Please try again.</string>
+    <string name="home_breakdown_center">Spent</string>
+    <string name="home_recent">Recent transactions</string>
+    <string name="home_empty_title">No transactions yet</string>
+    <string name="home_empty_message">Tap Add transaction to record your first income or expense. It will appear here.</string>
+    <string name="add_transaction">Add transaction</string>
+    <string name="chart_description">Spending breakdown chart. %1$s</string>
+    <string name="chart_slice_description">%1$s, %2$d%% of spending</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="signed_income">+%1$s</string>
+    <string name="signed_expense">−%1$s</string>
+    <string name="chart_description_entry">%1$s %2$d%%.</string>
+    <string name="type_income">Income</string>
+    <string name="type_expense">Expense</string>
+
+    <!-- Add transaction -->
+    <string name="add_transaction_title">Add transaction</string>
+    <string name="add_saved">Transaction saved</string>
+    <string name="add_save_failed">Could not save the transaction. Your entries are still here, so you can try again.</string>
+    <string name="add_categories_unavailable">Categories could not be loaded. Please close this screen and try again.</string>
+    <string name="field_payment_method">Payment method (optional)</string>
+    <string name="payment_method_none">Not specified</string>
+    <string name="field_amount">Amount</string>
+    <string name="field_category">Category</string>
+    <string name="field_date">Date</string>
+    <string name="field_note">Note (optional)</string>
+    <string name="select_date">Select date</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="error_amount_empty">Enter an amount</string>
+    <string name="error_amount_invalid">Enter a valid number</string>
+    <string name="error_amount_not_positive">Amount must be greater than zero</string>
+    <string name="error_amount_decimals">Use at most %1$d decimal places</string>
+    <string name="error_amount_whole">Enter a whole number (this currency has no decimals)</string>
+    <string name="error_amount_too_large">That amount is too large</string>
+    <string name="error_category">Choose a category</string>
+
+
+    <!-- Settings -->
+    <string name="settings_section_preferences">Preferences</string>
+    <string name="settings_section_data">Data</string>
+    <string name="settings_section_security">Security and privacy</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_appearance">Appearance and themes</string>
+    <string name="settings_appearance_summary">Currently: %1$s</string>
+    <string name="settings_currency">Currency and regional preferences</string>
+    <string name="currency_dialog_explanation">This is the currency used for new entries and the dashboard and report screens. Every saved record keeps the currency it was entered with, and amounts are never converted or changed - changing this choice is a display and entry preference, not a conversion.</string>
+    <string name="settings_backup_summary_never">No backup from this device yet</string>
+    <string name="settings_backup_summary_last">Last backup: %1$s</string>
+    <string name="settings_backup">Backup and restore</string>
+    <string name="settings_auto_backup">Automatic backup</string>
+    <string name="settings_reports_export">Reports and export</string>
+    <string name="settings_reports_export_summary">Charts, CSV and PDF export</string>
+    <string name="settings_privacy">Privacy policy</string>
+    <string name="settings_privacy_summary">How your data is handled</string>
+    <!-- Phase 10: ad consent entry point (shown only when UMP requires it, see AdSupport). -->
+    <string name="settings_ad_privacy">Ad privacy options</string>
+    <string name="settings_ad_privacy_summary">Review or change your Google ad consent choices</string>
+    <string name="settings_about">About the app</string>
+    <string name="settings_about_summary">Version and information</string>
+    <string name="settings_row_description">%1$s. %2$s.</string>
+
+    <string name="theme_dialog_title">Appearance</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <string name="about_title">About</string>
+    <string name="about_message">%1$s\nVersion %2$s\n\nA free expense tracker that works fully offline. No account is required, and there are no purchases or subscriptions. A banner ad, served by Google AdMob, may appear at the bottom of the main screens, and an occasional full-screen ad (at most once every ten minutes) may appear when you close the Insights screen; ads never cover your financial data and no feature is locked behind an ad.\n\nBuilt with official AndroidX libraries (AppCompat, Room, Material Components, WorkManager), Google Play services for the optional Drive connection, and the Google Mobile Ads SDK with Google\'s User Messaging Platform for the ad consent flow.\n\nFull privacy information: Settings > Privacy, plus your ad consent choices under Settings > Ad privacy options where required. A public privacy policy page has not been published yet.</string>
+    <string name="about_licenses_action">Libraries</string>
+    <string name="about_licenses_title">Libraries and acknowledgments</string>
+    <string name="about_licenses_message">This app is built with freely distributable software:\n\n• AndroidX / Jetpack (AppCompat, ConstraintLayout, RecyclerView, Lifecycle) - Apache License 2.0\n• Room database - Apache License 2.0\n• Material Components - Apache License 2.0\n• WorkManager - Apache License 2.0\n• Google Play services (Identity, optional Drive access only) - licensed by Google\n• Google Mobile Ads SDK and User Messaging Platform (the banner ad on main screens, and its consent flow) - licensed by Google\n\nAll of it remains free software under its own licenses; no code was copied from commercial sources.\n\nProject links will be added only once they exist.</string>
+</resources>

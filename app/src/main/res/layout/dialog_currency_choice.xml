@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The currency picker: explanation and options in ONE custom view. A Material dialog does not
+    reliably show a message together with a single-choice list (the list can be dropped entirely,
+    as seen on device), so both parts are laid out here explicitly. The ScrollView keeps the
+    explanation and every currency reachable on small screens and with large font sizes.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_sm"
+        android:paddingBottom="@dimen/space_sm">
+
+        <TextView
+            android:id="@+id/currency_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_lg"
+            android:paddingEnd="@dimen/space_lg"
+            android:paddingBottom="@dimen/space_sm"
+            android:text="@string/currency_dialog_explanation"
+            android:textAppearance="@style/TextAppearance.DET.Body"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <RadioGroup
+            android:id="@+id/currency_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

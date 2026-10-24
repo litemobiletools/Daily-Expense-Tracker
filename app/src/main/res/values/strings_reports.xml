@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reports screen -->
+    <string name="reports_this_week">This week</string>
+    <string name="reports_this_month">This month</string>
+    <string name="reports_previous_month">Previous month</string>
+    <string name="reports_last_30">Last 30 days</string>
+    <string name="reports_last_90">Last 90 days</string>
+    <string name="reports_this_year">This year</string>
+    <string name="reports_custom">Custom</string>
+    <string name="reports_period_value">%1$s – %2$s</string>
+    <string name="reports_currency_note">Amounts in %1$s</string>
+    <string name="reports_in_progress">This period is still in progress.</string>
+    <plurals name="reports_other_currencies">
+        <item quantity="one">%1$d transaction in other currencies is not included in these totals.</item>
+        <item quantity="other">%1$d transactions in other currencies are not included in these totals.</item>
+    </plurals>
+    <string name="reports_export">Export</string>
+    <string name="reports_loading">Loading report</string>
+    <string name="reports_error">Could not load this report. Your data is safe on this device.</string>
+    <string name="reports_empty">No transactions in this period.</string>
+    <string name="reports_income">Income</string>
+    <string name="reports_expenses">Expenses</string>
+    <string name="reports_net">Net cash flow</string>
+    <string name="reports_summary_description">%1$s %2$s, %3$s %4$s, %5$s %6$s</string>
+    <string name="reports_previous_title">Compared with %1$s – %2$s</string>
+    <string name="reports_change_up">%1$s: %2$d%% higher (was %3$s)</string>
+    <string name="reports_change_down">%1$s: %2$d%% lower (was %3$s)</string>
+    <string name="reports_change_same">%1$s: unchanged (%2$s)</string>
+    <string name="reports_change_none">%1$s: no amount in the previous period to compare with (now %2$s)</string>
+    <string name="reports_daily_average">Average expense per day: %1$s over %2$d days</string>
+    <string name="reports_daily_average_none">Average expense per day: not available for a period that has not started</string>
+    <string name="reports_trend_daily">Daily spending</string>
+    <string name="reports_trend_monthly">Monthly income and expenses</string>
+    <string name="reports_trend_daily_description">Daily spending chart. Highest day %1$s with %2$s. Total %3$s.</string>
+    <string name="reports_trend_monthly_description">Monthly chart. %1$s</string>
+    <string name="reports_trend_month_entry">%1$s: income %2$s, expenses %3$s.</string>
+    <string name="reports_trend_empty">No spending recorded in this period</string>
+    <string name="reports_legend_income">Income</string>
+    <string name="reports_legend_expenses">Expenses</string>
+    <string name="reports_expense_categories">Expenses by category</string>
+    <string name="reports_income_categories">Income by category</string>
+    <string name="reports_sort_amount">By amount</string>
+    <string name="reports_sort_name">By name</string>
+    <string name="reports_category_amounts">%1$s · %2$s</string>
+    <plurals name="reports_transaction_count">
+        <item quantity="one">%1$d transaction</item>
+        <item quantity="other">%1$d transactions</item>
+    </plurals>
+    <string name="reports_category_share">%1$d%% of %2$s</string>
+    <string name="reports_category_description">%1$s, %2$s, %3$s, %4$d percent. Opens the category\'s transactions.</string>
+    <string name="reports_no_expenses">No expenses in this period</string>
+    <string name="reports_no_income">No income in this period</string>
+    <string name="reports_largest_expenses">Largest expenses</string>
+    <string name="reports_largest_income">Largest income</string>
+    <string name="reports_budgets">Budget versus actual</string>
+    <string name="reports_budgets_not_applicable">Budget comparison is shown for “This week”, “This month” and “Previous month”.</string>
+    <string name="reports_budgets_none">No budgets set for this kind of period.</string>
+    <string name="reports_view_transactions">View these transactions</string>
+    <string name="reports_facts_note">Recorded transactions only. Savings goals and upcoming recurring entries are not included. No forecasts.</string>
+    <string name="reports_custom_invalid">The start date must not be after the end date.</string>
+
+    <!-- Category drill-down -->
+    <string name="category_report_total">Total in %1$s: %2$s</string>
+    <string name="category_report_sort_amount">Largest first</string>
+    <string name="category_report_sort_date">Newest first</string>
+    <string name="category_report_open">Open in Transactions</string>
+    <plurals name="category_report_more_shown_of_total">
+        <item quantity="one">%1$d of %2$d transaction</item>
+        <item quantity="other">%1$d of %2$d transactions</item>
+    </plurals>
+    <string name="category_report_more">Showing the first %1$s. Open in Transactions to see all.</string>
+    <string name="category_report_empty">No transactions in this period.</string>
+
+    <!-- Export options -->
+    <string name="export_title">Export</string>
+    <string name="export_kind_transactions">Transactions (CSV)</string>
+    <string name="export_kind_categories">Category summary (CSV)</string>
+    <string name="export_kind_budgets">Budget summary (CSV)</string>
+    <string name="export_kind_pdf">Printable report (PDF)</string>
+    <string name="export_scope">Which transactions</string>
+    <string name="export_scope_period">Selected period</string>
+    <string name="export_scope_all">All time</string>
+    <string name="export_type">Type</string>
+    <string name="export_type_all">All</string>
+    <string name="export_type_income">Income only</string>
+    <string name="export_type_expense">Expenses only</string>
+    <string name="export_pdf_transactions">Include the list of transactions</string>
+    <string name="export_budgets_unavailable">Available for “This week”, “This month” and “Previous month”.</string>
+    <string name="export_privacy">The file is saved only where you choose. Nothing is uploaded.</string>
+    <string name="export_choose_location">Choose where to save</string>
+    <string name="export_progress">Creating your file…</string>
+    <string name="export_done_title">Export saved</string>
+    <plurals name="export_done_transactions">
+        <item quantity="one">1 transaction was exported.</item>
+        <item quantity="other">%1$d transactions were exported.</item>
+    </plurals>
+    <plurals name="export_done_rows">
+        <item quantity="one">1 row was exported.</item>
+        <item quantity="other">%1$d rows were exported.</item>
+    </plurals>
+    <string name="export_done_pdf">A %1$d-page report was saved.</string>
+    <string name="export_share">Share</string>
+    <string name="export_open">Open</string>
+    <string name="export_print">Print</string>
+    <string name="export_close">Close</string>
+    <string name="export_no_app">No app on this device can handle this file.</string>
+    <string name="export_failed">The export could not be completed and no file was kept. Please try another location.</string>
+    <string name="export_failed_title">Export failed</string>
+
+    <!-- PDF -->
+    <string name="pdf_title">Financial report</string>
+    <string name="pdf_period">Period: %1$s – %2$s</string>
+    <string name="pdf_currency">All amounts in %1$s</string>
+    <string name="pdf_generated">Generated %1$s</string>
+    <string name="pdf_previous">Previous period (%1$s – %2$s): income %3$s, expenses %4$s.</string>
+    <string name="pdf_no_comparison">There were no transactions in the previous period, so no percentage comparison is given.</string>
+    <string name="pdf_transactions">Transactions</string>
+    <string name="pdf_col_category">Category</string>
+    <string name="pdf_col_count">Count</string>
+    <string name="pdf_col_total">Total</string>
+    <string name="pdf_col_share">Share</string>
+    <string name="pdf_col_date">Date</string>
+    <string name="pdf_col_type">Type</string>
+    <string name="pdf_col_payment">Payment</string>
+    <string name="pdf_col_note">Note</string>
+    <string name="pdf_col_amount">Amount</string>
+    <string name="pdf_col_budget">Budget</string>
+    <string name="pdf_col_limit">Limit</string>
+    <string name="pdf_col_spent">Spent</string>
+    <string name="pdf_col_remaining">Remaining</string>
+    <string name="pdf_all_categories">All categories</string>
+    <string name="pdf_empty">No transactions were recorded in this period.</string>
+    <plurals name="pdf_other_currencies">
+        <item quantity="one">%1$d transaction in other currencies is not included in these %2$s totals.</item>
+        <item quantity="other">%1$d transactions in other currencies are not included in these %2$s totals.</item>
+    </plurals>
+    <string name="pdf_page">Page %1$d of %2$d</string>
+
+    <!-- Phase 11: full-line wrappers so multi-part display text is assembled from resources only
+         (no string concatenation in code). -->
+    <string name="export_period_currency_line">%1$s · %2$s</string>
+    <string name="insights_vs_with_note">%1$s\n%2$s</string>
+    <string name="reports_compare_income_expenses">%1$s\n%2$s</string>
+</resources>

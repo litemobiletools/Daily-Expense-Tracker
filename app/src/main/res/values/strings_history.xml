@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Transactions screen -->
+    <plurals name="transactions_count">
+        <item quantity="one">%1$d transaction</item>
+        <item quantity="other">%1$d transactions</item>
+    </plurals>
+    <plurals name="transactions_count_filtered">
+        <item quantity="one">%1$d matching transaction</item>
+        <item quantity="other">%1$d matching transactions</item>
+    </plurals>
+    <string name="search_hint">Search notes, categories, payment</string>
+    <string name="filters_button">Filters</string>
+    <string name="filters_button_count">Filters (%1$d)</string>
+    <string name="filters_button_description">Filters, %1$d active</string>
+    <string name="clear_filters">Clear filters</string>
+    <string name="history_loading">Loading transactions</string>
+    <string name="history_error_title">Could not load transactions</string>
+    <string name="history_error_message">Something went wrong while reading your data. Your transactions are safe on this device.</string>
+    <string name="retry">Try again</string>
+    <string name="history_empty_title">No transactions yet</string>
+    <string name="history_empty_message">Tap Add transaction to record your first income or expense.</string>
+    <string name="history_noresults_title">No matching transactions</string>
+    <string name="history_noresults_message">Try a different search or remove some filters.</string>
+    <string name="clear_search_and_filters">Clear search and filters</string>
+    <string name="day_today">Today</string>
+    <string name="day_yesterday">Yesterday</string>
+
+    <!-- Details -->
+    <string name="details_category">Category</string>
+    <string name="details_date">Date and time</string>
+    <string name="details_payment">Payment method</string>
+    <string name="details_note">Note</string>
+    <string name="details_created">Created</string>
+    <string name="details_modified">Last modified</string>
+    <string name="details_edit">Edit</string>
+    <string name="details_delete">Delete</string>
+    <string name="details_not_found">This transaction no longer exists.</string>
+    <string name="details_load_failed">Could not load this transaction.</string>
+    <string name="row_description">%1$s, %2$s, %3$s, %4$s, %5$s</string>
+    <string name="row_description_payment">%1$s, %2$s, %3$s, %4$s, %5$s, paid by %6$s</string>
+
+    <!-- Delete -->
+    <string name="delete_title">Delete this transaction?</string>
+    <string name="delete_message">%1$s: %2$s, %3$s, %4$s.\n\nThis removes it from the database on this device. Categories and payment methods are not affected.</string>
+    <string name="delete_message_note">%1$s: %2$s, %3$s, %4$s (\"%5$s\").\n\nThis removes it from the database on this device. Categories and payment methods are not affected.</string>
+    <string name="delete_confirm">Delete</string>
+    <string name="delete_done">Transaction deleted</string>
+    <string name="delete_undo">Undo</string>
+    <string name="delete_failed">Could not delete the transaction. Nothing was changed.</string>
+    <string name="restore_done">Transaction restored</string>
+    <string name="restore_failed">Could not restore the transaction.</string>
+
+    <!-- Edit -->
+    <string name="edit_transaction_title">Edit transaction</string>
+    <string name="edit_saved">Transaction updated</string>
+    <string name="edit_not_found">This transaction no longer exists.</string>
+
+    <!-- Filter sheet -->
+    <string name="filter_title">Filters</string>
+    <string name="filter_type">Type</string>
+    <string name="filter_all">All</string>
+    <string name="filter_income">Income</string>
+    <string name="filter_expense">Expenses</string>
+    <string name="filter_dates">Date range</string>
+    <string name="filter_start">From</string>
+    <string name="filter_end">To</string>
+    <string name="filter_clear_dates">Clear dates</string>
+    <string name="filter_category">Category</string>
+    <string name="filter_category_all">All categories</string>
+    <string name="filter_payment">Payment method</string>
+    <string name="filter_payment_any">Any payment method</string>
+    <string name="filter_amounts">Amount range</string>
+    <string name="filter_min">Minimum</string>
+    <string name="filter_max">Maximum</string>
+    <string name="filter_apply">Apply</string>
+    <string name="filter_clear_all">Clear all</string>
+    <string name="filter_error_dates">End date must not be before the start date</string>
+    <string name="filter_error_amounts">Maximum must not be below the minimum</string>
+    <string name="filter_amount_hint">Only transactions in %1$s are matched by amount.</string>
+    <string name="category_with_type">%1$s (%2$s)</string>
+</resources>

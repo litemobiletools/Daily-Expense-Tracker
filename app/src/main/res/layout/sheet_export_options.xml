@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/space_xl"
+        android:paddingBottom="@dimen/space_xl"
+        android:paddingTop="@dimen/space_sm">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:text="@string/export_title"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/export_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.DET.Body" />
+
+        <RadioGroup
+            android:id="@+id/export_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:checkedButton="@+id/export_kind_transactions">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/export_kind_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/export_kind_transactions" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/export_kind_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/export_kind_categories" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/export_kind_budgets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/export_kind_budgets" />
+
+            <TextView
+                android:id="@+id/export_budgets_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="48dp"
+                android:paddingEnd="48dp"
+                android:text="@string/export_budgets_unavailable"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:visibility="gone" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/export_kind_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch"
+                android:text="@string/export_kind_pdf" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/export_transaction_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/export_scope"
+                android:textAppearance="@style/TextAppearance.DET.Label" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/export_scope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/export_scope_period"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/export_scope_period" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/export_scope_all"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/export_scope_all" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/export_type"
+                android:textAppearance="@style/TextAppearance.DET.Label" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/export_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/export_type_all"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/export_type_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/export_type_income"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/export_type_income" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/export_type_expense"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/export_type_expense" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/export_pdf_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:checked="true"
+            android:minHeight="@dimen/min_touch"
+            android:text="@string/export_pdf_transactions"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:text="@string/export_privacy"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/export_go"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:minHeight="@dimen/min_touch"
+            android:text="@string/export_choose_location"
+            app:icon="@drawable/ic_export" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
