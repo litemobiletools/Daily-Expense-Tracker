@@ -254,8 +254,19 @@ public class SettingsFragment extends Fragment {
         new MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.privacy_dialog_title)
                 .setMessage(R.string.privacy_dialog_message)
-                .setPositiveButton(R.string.action_ok, null)
+                .setPositiveButton(R.string.privacy_open_policy, (d, w) -> openPrivacyPolicy())
+                .setNegativeButton(R.string.action_ok, null)
                 .show();
+    }
+
+    private void openPrivacyPolicy() {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    android.net.Uri.parse(getString(R.string.privacy_policy_url))));
+        } catch (android.content.ActivityNotFoundException e) {
+            android.widget.Toast.makeText(requireContext(), R.string.privacy_open_failed,
+                    android.widget.Toast.LENGTH_LONG).show();
+        }
     }
 
     private void showAbout() {
