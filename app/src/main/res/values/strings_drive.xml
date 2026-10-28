@@ -51,7 +51,7 @@
     <string name="drive_open_permissions">Review Google Account access</string>
     <string name="drive_open_failed">Could not open your Google Account settings.</string>
 
-    <string name="privacy_policy_url" translatable="false">https://litemobiletools.github.io/Daily-Expense-Tracker-Page/privacy.html</string>
+    <string name="privacy_policy_url" translatable="false">https://litemobiletools.blogspot.com/p/privacy-policy-daily-expense-tracker.html</string>
     <string name="privacy_open_policy">Open privacy policy</string>
     <string name="privacy_open_failed">Could not open the privacy policy. No web browser found.</string>
     <string name="privacy_dialog_title">Privacy</string>

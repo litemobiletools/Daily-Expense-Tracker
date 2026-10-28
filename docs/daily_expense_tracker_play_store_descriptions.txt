@@ -1,0 +1,77 @@
+DAILY EXPENSE TRACKER — GOOGLE PLAY STORE DESCRIPTIONS
+
+SHORT DESCRIPTION (80 characters or fewer)
+Track expenses, manage budgets, and monitor your spending with ease.
+
+FULL DESCRIPTION
+Daily Expense Tracker – Manage Your Money Smarter
+
+Take control of your money with Daily Expense Tracker, a simple and convenient app for recording daily expenses, managing your budget, and understanding your spending habits.
+
+Whether you want to track everyday purchases, monitor monthly expenses, or organize your personal finances, Daily Expense Tracker helps you keep your financial records organized in one place.
+
+KEY FEATURES
+
+Expense Management
+- Add, edit, and delete expense records.
+- Record daily spending quickly and easily.
+- Organize expenses by category.
+- Add expense details, notes, and dates.
+- View your expense history.
+
+Income Tracking
+- Record your income.
+- Track money coming in and going out.
+- Review your income and expenses together.
+
+Reports and Statistics
+- View spending summaries.
+- Analyze expenses by category.
+- Monitor daily and monthly spending.
+- Understand your spending patterns with visual reports and charts.
+
+Budget Management
+- Set spending budgets.
+- Monitor your expenses against your budget.
+- Keep track of your spending limits.
+- Make more informed spending decisions.
+
+Date-Based Tracking
+- Review expenses by date.
+- Filter records by a selected period.
+- Check daily, weekly, or monthly summaries, where supported.
+
+Currency Settings
+- Configure your preferred currency.
+- View financial amounts using the selected currency, where supported.
+
+Google Drive Backup and Restore
+- Back up your financial records to Google Drive, if enabled.
+- Restore supported backup data when needed.
+- Help protect your records when changing devices.
+
+Privacy and Data Control
+- Manage your personal expense records.
+- Use available backup settings to control your backups.
+- Review the app's privacy policy to understand how your data is handled.
+
+Simple and User-Friendly Design
+- Clean and easy-to-use interface.
+- Convenient expense entry and record management.
+- Quick access to financial summaries.
+- Designed for everyday personal finance tracking.
+
+WHY CHOOSE DAILY EXPENSE TRACKER?
+- Keep your expenses organized.
+- Understand where your money goes.
+- Monitor your spending habits.
+- Plan your budget more effectively.
+- Keep track of your financial activity in one convenient place.
+
+START TRACKING TODAY!
+Make expense tracking part of your daily routine. Download Daily Expense Tracker and take a clearer, more organized approach to managing your personal finances.
+
+Note: Daily Expense Tracker is a personal expense-management tool. It does not provide banking, lending, investment, or financial advisory services.
+
+IMPORTANT BEFORE PUBLISHING
+Keep only features that are actually available and tested in your app. In particular, verify income tracking, budgets, charts/reports, currency settings, and Google Drive backup/restore before publishing. Make sure your Google Play Data Safety answers match the app's actual behavior and SDKs.

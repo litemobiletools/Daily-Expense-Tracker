@@ -26,15 +26,13 @@
 -->
 <resources>
 
+    <string name="admob_app_id" translatable="false">ca-app-pub-4780179345311976~9890299351</string>
+    <string name="admob_banner_unit_id" translatable="false">ca-app-pub-4780179345311976/7715774187</string>
+    <string name="admob_interstitial_unit_id" translatable="false">ca-app-pub-4780179345311976/4797754776</string>
+
     <!-- Google's official sample App ID (test), as provided in the demo snippet. -->
-    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
-
-    <!-- Google's official test banner ad unit, as provided in the demo snippet. If the banner
-         ever fails to fill on some devices, the adaptive-banner-specific test unit is
-         ca-app-pub-3940256099942544/9214589741 - a one-line swap here. -->
-    <string name="admob_banner_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-
-    <!-- Google's official test interstitial ad unit, as provided in the demo snippet. -->
-    <string name="admob_interstitial_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+<!--    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--    <string name="admob_banner_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="admob_interstitial_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>-->
 
 </resources>
